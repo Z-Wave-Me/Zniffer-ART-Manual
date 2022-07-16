@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Z-Wave.Me Advanced Radio Toolkit Documentation</title>
+   </head>
+   <body>
+      <h1 id="toc_0">Z-Wave.Me Advanced Radio Toolkit (A.R.T.)</h1>
+      <h2 id="toc_1">Main window</h2>
+      <ul>
+         <li>Menu bar</li>
+         <li>Trace Window Area</li>
+         <li>
+            Tab area
+            <ul>
+               <li>Devices</li>
+               <li>Send Data</li>
+               <li>Pkg Details </li>
+            </ul>
+         </li>
+      </ul>
+      <h3 id="toc_2">Devices</h3>
+      <ul>
+         <li><strong>Name</strong> - The name of the equipment (Z-Uno, RaZberry) that listens to the radio broadcast, is displayed in the Trace window, can be edited.</li>
+         <li><strong>Serial</strong> - Device port. Local ports and remote ports with a web serial address are supported.</li>
+         <li><strong>Protocol</strong> - Protocol for equipment interaction with the A.R.T application (Modem, PCI).</li>
+         <li><strong>Baudrate</strong> - Serial port speed. For PTI, it is selected manually (by default, 230400). For Modem, it is detected automatically.</li>
+         <li><strong>Region</strong> - The radio frequency on which the equipment listens to the radio broadcast. The current frequency of the equipment is used for PTI, any region can be selected for Modem.</li>
+         <li><strong>TX Power</strong> - The radiation power of the modem is 0.1 dBm. For PTI it is impossible to change, for Modem it is possible to set a value from 0 to 200, i.e. from 0 to 20 dBm.</li>
+         <li><strong>UUID</strong> - The UUID of the equipment USB adapter, read-only.</li>
+         <li><strong>Status</strong> - Shows the status of the equipment, idle or the process of listening to the radio is active.</li>
+         <li><strong>Buttons:</strong><br>
+            &quot;+&quot; - Add new equipment<br>
+            &quot;-&quot; - Delete the selected equipment<br>
+            <a href="#about-equipment">&quot;i&quot;</a> - Information about the selected equipment (should not be active)<br>
+            &quot;all&quot; - Select all equipment<br>
+            &quot;&quot;start&quot; - Start listening to the radio<br>
+            &quot;&quot;stop&quot; - Stop listening to the radio<br>
+            &quot;trace&quot; - Open a window for viewing the traffic of the radio broadcast for the selected equipment
+         </li>
+      </ul>
+      <h3 id="toc_3">Send Data</h3>
+      <p>You can send a packet only if the equipment is running on the Modem protocol.</p>
+      <ul>
+         <li><strong>Device</strong> - The equipment from which the package will be sent</li>
+         <li><strong>Channel</strong> - Data sending channel</li>
+         <li><strong>Contents</strong> - A table that allows you to generate a package for sending</li>
+         <li><strong>RAW</strong> - Package to be sent in the HEX format</li>
+      </ul>
+      <h3 id="toc_4">PkgDetails</h3>
+      <ol>
+         <li>The table shows detailed information about the selected Z-Wave package from the Trace window.</li>
+         <li>The user can select the version of the command class. By default, the oldest available version is used.</li>
+         <li>If one byte contains several properties, then each is written from a new line.</li>
+         <li>For some packages, additional data may be displayed, for example, a decoding of the On/Off relay status.</li>
+      </ol>
+   </body>
+</html>
