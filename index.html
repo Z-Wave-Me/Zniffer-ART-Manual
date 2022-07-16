@@ -4,7 +4,7 @@
       <title>Z-Wave.Me Advanced Radio Toolkit Documentation</title>
    </head>
    <body>
-      <h1 id="toc_0">Z-Wave.Me Advanced Radio Toolkit (A.R.T.)</h1>
+      <h1 id="toc_0">Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.)</h1>
       <h2 id="toc_1">Main window</h2>
       <ul>
          <li>Menu bar</li>
@@ -22,17 +22,17 @@
       <ul>
          <li><strong>Name</strong> - The name of the equipment (Z-Uno, RaZberry) that listens to the radio broadcast, is displayed in the Trace window, can be edited.</li>
          <li><strong>Serial</strong> - Device port. Local ports and remote ports with a web serial address are supported.</li>
-         <li><strong>Protocol</strong> - Protocol for equipment interaction with the A.R.T application (Modem, PCI).</li>
-         <li><strong>Baudrate</strong> - Serial port speed. For PTI, it is selected manually (by default, 230400). For Modem, it is detected automatically.</li>
-         <li><strong>Region</strong> - The radio frequency on which the equipment listens to the radio broadcast. The current frequency of the equipment is used for PTI, any region can be selected for Modem.</li>
-         <li><strong>TX Power</strong> - The radiation power of the modem is 0.1 dBm. For PTI it is impossible to change, for Modem it is possible to set a value from 0 to 200, i.e. from 0 to 20 dBm.</li>
+         <li><strong>Protocol</strong> - Protocol for equipment interaction with the A.R.T application (Modem - special mode with the ability to monitor and send packets, PTI - Z-Uno/RaZberry continues to work in normal mode and report all incoming packets).</li>
+         <li><strong>Baudrate</strong> - Serial port speed. For PTI, it is selected manually (for RaZberry 7 always 230400, for Z-Uno 2 by default 230400 and should match the speed in <a href="https://z-uno.z-wave.me/Reference/zunoPTIConfigUART/?zunoVersion=v2">zunoPTIConfigUART</a> function). For Modem, it is detected automatically.</li>
+         <li><strong>Region</strong> - The radio frequency on which the equipment listens to the radio broadcast. For PTI the current frequency of the equipment is used.</li>
+         <li><strong>TX Power</strong> - The radiation power of the modem is 0.1 dBm. Not available for PTI mode. For Modem it is possible to set a value from 0 to 200, i.e. from 0 to 20 dBm.</li>
          <li><strong>UUID</strong> - The UUID of the equipment USB adapter, read-only.</li>
          <li><strong>Status</strong> - Shows the status of the equipment, idle or the process of listening to the radio is active.</li>
          <li><strong>Buttons:</strong><br>
             &quot;+&quot; - Add new equipment<br>
             &quot;-&quot; - Delete the selected equipment<br>
             <a href="#about-equipment">&quot;i&quot;</a> - Information about the selected equipment (should not be active)<br>
-            &quot;all&quot; - Select all equipment<br>
+            &quot;all&quot; - Select all equipments<br>
             &quot;&quot;start&quot; - Start listening to the radio<br>
             &quot;&quot;stop&quot; - Stop listening to the radio<br>
             &quot;trace&quot; - Open a window for viewing the traffic of the radio broadcast for the selected equipment
