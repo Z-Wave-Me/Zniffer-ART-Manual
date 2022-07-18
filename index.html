@@ -1,24 +1,32 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <title>Z-Wave.Me Advanced Radio Toolkit Documentation</title>
+      <title>Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.)</title>
    </head>
    <body>
       <h1 id="toc_0">Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.)</h1>
-      <h2 id="toc_1">Main window</h2>
+      <p>Advanced Radio Toolkit (A.R.T.) - this is a software and hardware complex designed to listen to the radio broadcast of the wireless Z-Wave protocol, compose and send any packets.</p>
+      <p>Monitoring radio commands allows you to identify problems in the Z-Wave network, such as incorrect routes, associations with non-existent devices, incorrect packet, and much more.</p>
+      <p>Composing and sending packages will be useful for advanced installers and developers of Z-Wave devices to check regular and abnormal situations.</p>
+      <p>Z-Uno or RaZberry with a Z-Wave chip of the 7th generation and higher is used as equipment for listening and sending radio commands. The A.R.T. can work simultaneously with several equipment, in this case, you can observe the signal strength of one device from different locations at the same time.</p>
+      <p>In order for the equipment to be supported by the software, it is necessary to purchase a license.</p>
+      <h2 id="Main window">Main window</h2>
       <ul>
-         <li>Menu bar</li>
-         <li>Trace Window Area</li>
+         <li><a href="#MenuBar">Menu Bar</a></li>
+         <li><a href="#TraceArea">Tracing Window Area</a></li>
          <li>
             Tab area
             <ul>
-               <li>Devices</li>
-               <li>Send Data</li>
-               <li>Pkg Details </li>
+               <li><a href="#Devices">Devices</a></li>
+               <li><a href="#SendData">Send Data</a></li>
+               <li><a href="#PkgDetails">Pkg Details</a></li>
             </ul>
          </li>
       </ul>
-      <h3 id="toc_2">Devices</h3>
+      <img src="pics/ART.png" width="80%">
+      <h3 id="Devices">Devices</h3>
+      <p>Сonnect the equipment to the computer, press &quot;+&quot; to add it to the devices list and select the serial port, if selected correctly, the equipment UUID will be displayed.</p>
+      <img src="pics/Devices.png" width="80%">
       <ul>
          <li><strong>Name</strong> - The name of the equipment (Z-Uno, RaZberry) that listens to the radio broadcast, is displayed in the Trace window, can be edited.</li>
          <li><strong>Serial</strong> - Device port. Local ports and remote ports with a web serial address are supported.</li>
@@ -31,27 +39,63 @@
          <li><strong>Buttons:</strong><br>
             &quot;+&quot; - Add new equipment<br>
             &quot;-&quot; - Delete the selected equipment<br>
-            <a href="#about-equipment">&quot;i&quot;</a> - Information about the selected equipment (should not be active)<br>
+            <a href="#AboutEquipment">&quot;i&quot;</a> - Information about the selected equipment (should not be active)<br>
             &quot;all&quot; - Select all equipments<br>
-            &quot;&quot;start&quot; - Start listening to the radio<br>
-            &quot;&quot;stop&quot; - Stop listening to the radio<br>
+            &quot;start&quot; - Start listening to the radio<br>
+            &quot;stop&quot; - Stop listening to the radio<br>
             &quot;trace&quot; - Open a window for viewing the traffic of the radio broadcast for the selected equipment
          </li>
       </ul>
-      <h3 id="toc_3">Send Data</h3>
+      <h3 id="AboutEquipment">About equipment</h3>
+      <p>This window contains full information about the capabilities of the equipment and other functions.</p>
+      <img src="pics/AboutEquipment.png" width="80%">
+      <ul>
+         <li>Type of equipment</li>
+         <li>Is the license activated for the equipment to work with the software</li>
+         <li>Purchase a license</li>
+         <li>Check the operation of the radio in the equipment</li>
+         <li>Select the radio frequency (region) and adjust the transmitter power</li>
+         <li>For Z-Uno, it is possible to get a QR code to include via SmartStart/S2</li>
+      </ul>
+      <h3 id="SendData">Send Data</h3>
       <p>You can send a packet only if the equipment is running on the Modem protocol.</p>
+      <img src="pics/SendData.png" width="80%">
       <ul>
          <li><strong>Device</strong> - The equipment from which the package will be sent</li>
          <li><strong>Channel</strong> - Data sending channel</li>
          <li><strong>Contents</strong> - A table that allows you to generate a package for sending</li>
          <li><strong>RAW</strong> - Package to be sent in the HEX format</li>
       </ul>
-      <h3 id="toc_4">PkgDetails</h3>
+      <h3 id="PkgDetails">PkgDetails</h3>
+      <p>As an example, the screenshot shows a package from an socket plug with a measurement of energy consumption.</p>
+      <img src="pics/PkgInfoMeter.png" width="80%">
       <ol>
          <li>The table shows detailed information about the selected Z-Wave package from the Trace window.</li>
          <li>The user can select the version of the command class. By default, the oldest available version is used.</li>
          <li>If one byte contains several properties, then each is written from a new line.</li>
-         <li>For some packages, additional data may be displayed, for example, a decoding of the On/Off relay status.</li>
+         <li>For some packages, additional data may be displayed, for example, a decoding of the meter value.</li>
       </ol>
+      <h3 id="TraceArea">Tracing Window Area</h3>
+      <p>The trace window in real time shows all Z-Wave radio commands at a given frequency.</p>
+      <img src="pics/TraceArea.png" width="80%">
+      <p>To create a new Trace window, select the equipment on the <a href="#Devices">Devices</a> tab and click the trace button. If the trace button is not active, then first you need to press the start button.</p>
+      <p>You can work with several equipment at the same time and open a Trace window for each. Also you can open several windows for one equipment.</p>
+      <p>If you press the right mouse button in the Trace window anywhere, a menu will appear.</p>
+      <img src="pics/Filter.png" width="50%">
+      <ul>
+         <li>Auto scroll enable/disable</li>
+         <li>Clear the window</li>
+         <li>Export selected strings in the format JSON/CSV</li>
+         <li>Filter<br>
+         </li>
+      </ul>
+      <h3 id="MenuBar">Menu Bar</h3>
+      <img src="pics/Menu.png" width="30%">
+      <ul>
+         <li><strong>New</strong> - Create the new project</li>
+         <li><strong>Open</strong> - Open the saved project</li>
+         <li><strong>Save/Save As</strong> - The project is saved in JSON format and contains a list of equipments with port, trace windows, statistics, including S0/S2 encryption keys, HomeID, etc.</li>
+         </li>
+      </ul>
    </body>
 </html>
