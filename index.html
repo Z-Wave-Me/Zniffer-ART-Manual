@@ -18,28 +18,28 @@
                <li><a href="#">...</a>
                <li><a href="#">...</a>
             </ul>
-            <li><a href="#Installation">Installation</a>
+            <li><a href="#Download">Installation</a>
             <ul>
                <li><a href="#Download">Download</a>
                <li><a href="#Hardware">Prepare your hardware</a>
-               <li><a href="#">...</a>
-               <li><a href="#">...</a>
             </ul>
             <li><a href="#MainWindow">User Interface</a>
             <ul>
-               <li><a href="#MainWindow">Main Window</a>
+               <li><a href="#MainWindow">Main window</a>
                <li><a href="#Devices">Devices</a>
                <li><a href="#AboutEquipment">About equipment</a>
-               <li><a href="#SendData">Send Data</a>
-               <li><a href="#PacketDetails">Packet Details</a>
-               <li><a href="#TraceArea">Tracing Area</a>
+               <li><a href="#SendData">Send data</a>
+               <li><a href="#PacketDetails">Packet details</a>
+               <li><a href="#TraceArea">Tracing area</a>
                <li><a href="#MenuBar">Menu bar</a>
                <li><a href="#WindowMode">Window mode</a>
             </ul>
-            <li><a href="#Using">Using Zniffer</a>
+            <li><a href="#License">Using Zniffer/A.R.T.</a>
             <ul>
-               <li><a href="#"></a>
-               <li><a href="#"></a>
+               <li><a href="#License">License</a>
+               <li><a href="#OperatingMode">Operating mode</a>
+               <li><a href="#RemotePort">Remote port</a>
+               <li><a href="#EncryptionKeys">Encryption keys S0/S2</a>
                <li><a href="#Filters">Filters</a>
                <li><a href="#"></a>
             </ul>
@@ -49,20 +49,20 @@
       <div id="Content">
          <h1>Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.)</h1>
          <p>Version 0.2b3</p>
-         <p>Advanced Radio Toolkit (A.R.T.) &mdash; this is a software and hardware complex designed to listen to the radio broadcast of the wireless Z-Wave protocol, compose and send any packets.</p>
+         <p>Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.) &mdash; this is a software and hardware complex designed to listen to the radio broadcast of the wireless Z-Wave protocol, compose and send any packets.</p>
          <p>Monitoring radio commands allows you to identify problems in the Z-Wave network, such as incorrect routes, associations with non-existent devices, incorrect packet, and much more.</p>
          <p>Composing and sending packages will be useful for advanced installers and developers of Z-Wave devices to check regular and abnormal situations.</p>
-         <p>Z-Uno or RaZberry with a Z-Wave chip of the 7th generation and higher is used as equipment for listening and sending radio commands. The A.R.T. can work simultaneously with several equipment, in this case, you can observe the signal strength of one device from different locations at the same time.</p>
+         <p>Z-Uno or RaZberry with a Z-Wave chip of the 7th generation and higher is used as equipment for listening and sending radio commands. The Zniffer/A.R.T. can work simultaneously with several equipment, in this case, you can observe the signal strength of one device from different locations at the same time.</p>
          <p>In order for the equipment to be supported by the software, it is necessary to purchase a license.</p>
-         <h2 id="MainWindow">Main window</h2>
-         <img src="pics/ART.png" width="80%">
+         <h3 id="MainWindow">Main window</h3>
+         <img src="pics/ART.png" width="100%">
          <h3 id="Devices">Devices</h3>
          <p>Сonnect the equipment to the computer, press &quot;+&quot; to add it to the devices list and select the serial port, if selected correctly, the equipment UUID will be displayed.</p>
-         <img src="pics/Devices.png" width="80%">
+         <img src="pics/Devices.png" width="100%">
          <ul>
             <li><strong>Name</strong> &mdash; The name of the equipment (Z-Uno, RaZberry) that listens to the radio broadcast, is displayed in the Trace window, can be edited.</li>
             <li><strong>Serial</strong> &mdash; Device port. Local ports and remote ports with a web serial address are supported.</li>
-            <li><strong>Protocol</strong> &mdash; Protocol for equipment interaction with the A.R.T application (Modem &mdash; special mode with the ability to monitor and send packets, PTI &mdash; Z-Uno/RaZberry continues to work in normal mode and report all incoming packets).</li>
+            <li><strong>Protocol</strong> &mdash; Protocol for equipment interaction with the Zniffer/A.R.T application (Modem &mdash; special mode with the ability to monitor and send packets, PTI &mdash; Z-Uno/RaZberry continues to work in normal mode and report all incoming packets).</li>
             <li><strong>Baudrate</strong> &mdash; Serial port speed. For PTI, it is selected manually (for RaZberry 7 always 230400, for Z-Uno 2 by default 230400 and should match the speed in <a href="https://z-uno.z-wave.me/Reference/zunoPTIConfigUART/?zunoVersion=v2">zunoPTIConfigUART</a> function). For Modem, it is detected automatically.</li>
             <li><strong>Region</strong> &mdash; The radio frequency on which the equipment listens to the radio broadcast. For PTI the current frequency of the equipment is used.</li>
             <li><strong>TX Power</strong> &mdash; The radiation power of the modem is 0.1 dBm. Not available for PTI mode. For Modem it is possible to set a value from 0 to 200, i.e. from 0 to 20 dBm.</li>
@@ -82,7 +82,7 @@
          </ul>
          <h3 id="AboutEquipment">About equipment</h3>
          <p>This window contains full information about the capabilities of the equipment and other functions.</p>
-         <img src="pics/AboutEquipment.png" width="80%">
+         <img src="pics/AboutEquipment.png" width="100%">
          <ul>
             <li>Type of equipment</li>
             <li>Is the license activated for the equipment to work with the software</li>
@@ -91,27 +91,27 @@
             <li>Select the radio frequency (region) and adjust the transmitter power</li>
             <li>For Z-Uno, it is possible to get a QR code to include via SmartStart/S2</li>
          </ul>
-         <h3 id="SendData">Send Data</h3>
+         <h3 id="SendData">Send data</h3>
          <p>You can send a packet only if the equipment is running on the Modem protocol.</p>
-         <img src="pics/SendData.png" width="80%">
+         <img src="pics/SendData.png" width="100%">
          <ul>
             <li><strong>Device</strong> &mdash; The equipment from which the package will be sent</li>
             <li><strong>Channel</strong> &mdash; Data sending channel</li>
             <li><strong>Contents</strong> &mdash; A table that allows you to generate a package for sending</li>
             <li><strong>RAW</strong> &mdash; Package to be sent in the HEX format</li>
          </ul>
-         <h3 id="PacketDetails">Packet Details</h3>
+         <h3 id="PacketDetails">Packet details</h3>
          <p>As an example, the screenshot shows a package from an socket plug with a measurement of energy consumption.</p>
-         <img src="pics/PacketInfoMeter.png" width="80%">
+         <img src="pics/PacketInfoMeter.png" width="100%">
          <ol>
             <li>The table shows detailed information about the selected Z-Wave package from the Trace window.</li>
             <li>The user can select the version of the command class. By default, the oldest available version is used.</li>
             <li>If one byte contains several properties, then each is written from a new line.</li>
             <li>For some packages, additional data may be displayed, for example, a decoding of the meter value.</li>
          </ol>
-         <h3 id="TraceArea">Tracing Window Area</h3>
+         <h3 id="TraceArea">Tracing window area</h3>
          <p>The trace window in real time shows all Z-Wave radio commands at a given frequency.</p>
-         <img src="pics/TraceArea.png" width="80%">
+         <img src="pics/TraceArea.png" width="100%">
          <p>To create a new Trace window, select the equipment on the <a href="#Devices">Devices</a> tab and click the trace button. If the trace button is not active, then first you need to press the start button.</p>
          <p>You can work with several equipment at the same time and open a Trace window for each. Also you can open several windows for one equipment.</p>
          <p>If you press the right mouse button in the Trace window anywhere, a menu will appear.</p>
@@ -123,7 +123,7 @@
             <li>Filter</li>
             </li>
          </ul>
-         <h3 id="MenuBar">Menu Bar</h3>
+         <h3 id="MenuBar">Menu bar</h3>
          <img src="pics/Menu.png" width="30%">
          <ul>
             <li><strong>New</strong> &mdash; Create the new project</li>
@@ -131,10 +131,80 @@
             <li><strong>Save/Save As</strong> &mdash; The project is saved in JSON format and contains a list of equipments with port, trace windows, statistics, including S0/S2 encryption keys, HomeID, etc.</li>
             </li>
          </ul>
-         <h3 id="WindowMode">Window Mode</h3>
-         <p>Zniffer can work in Multi-Document Interface mode (with manu windows inside one window, this is the default mode) as well as with separate windows. Use <i>-ft</i> command line option to swith to separate windows mode: <i>zme_radiotools -ft</i></p>
+         <h3 id="WindowMode">Window mode</h3>
+         <p>Zniffer can work in Multi-Document Interface mode (with many windows inside one window, this is the default mode) as well as with separate windows. Use <i>-ft</i> command line option to switch to separate windows mode: <i>zme_radiotools -ft</i></p>
+         <h3 id="License">License</h3>
+         <img src="pics/AboutEquipment.png" width="100%">
+         <p>You can buy a license from the window <a href="#AboutEquipment">About equipment</a>. Also you can purchase a license on the website, and you will need to specify the Device UUID.<br><a href="https://z-wave.me/hardware-capabilities/?uuid=">https://z-wave.me/hardware-capabilities/?uuid=Device UUID<br></a></p>
+         <p>If the device already has a license, and you bought a new one, then open the window <a href="#AboutEquipment">About equipment</a> and it is applied automatically.</p>
+         <h3 id="OperatingMode">Operating mode PTI/MODEM</h3>
+         <p><strong>PTI (Packet Trace Interface)</strong> only allows you to sniff Z-Wave packets, while the device is operating normally. The user code works on Z-Uno, the controller code works on RaZberry. This is a good way of debugging, which does not take CPU time, the interface is completely hardware. In order for Z-Uno to be used in the sketch, you need to include a special system call that specifies the pin and speed.</p>
+         <p><strong>MODEM</strong> - the equipment is completely controlled by the program on the computer. You can sniff and send Z-Wave packets. The user's settings are not lost in this case. The MODEM license will include the PTI license.</p>
+         <h3 id="RemotePort">Remote port</h3>
+         <p>The <strong>zme_webserial</strong> utility allows you to connect to the equipment that is used on a remote computer. This allows you to watch the radio broadcast from different points in space from a local computer.</p>
+         <img src="pics/zme_webserial.png" width="60%">
+         <p>The zme_webserial utility works not only with Zniffer/A.R.T, but also with other Z-Wave.Me utilities, such as zme_make and zme_programmer.</p>
+         <p>When configuring the utility, you can specify which ports are visible remotely based on the "white" and "black" lists.</p>
+         <img src="pics/RemotePort.png" width="100%">
+         <p>Example of connecting to remote equipment:
+            <ul>
+               <li><i>/dev/cu.SLAB_USBtoUART@192.168.2.41:8998</i> - macOS</li>
+               <li><i>/dev/ttyUSB0@192.168.2.41:8998</i> - Linux/Raspberry Pi</li>
+               <li><i>COM11@192.168.2.41:8998</i> - Windows</li>
+               <li><i>0x667074e5cbe9ea11a74b7a80e9d60aec@192.168.2.41:8998</i> - Universal by UUID</li>
+            </ul>
+         </p>
+         <h3 id="EncryptionKeys">Encryption keys S0/S2</h3>
+         <p>To decrypt encrypted packets, you need to get the encryption keys. There are 3 ways to get encryption keys.
+            <ol>
+               <li>Zniffer/A.R.T. supports PC-Controller format files. The key files must be placed in a special user folder (~/ZMEStorage/SecurityKeys).</li>
+               <li>Zniffer/A.R.T. can catch S0 keys from the radio when including a device to the Z-Wave network and save it to the key directory.</li>
+               <li>Zniffer/A.R.T. can extract S0/S2 keys from Z-Uno, which is included to the Z-Wave network (license required).</li>
+            </ol>
+         </p>
+         <h3 id=PTIPin>PTI pin on the RaZberry and Z-Uno</h3>
+         <h4>RaZberry</h4>
+         <p>On the reverse side of the RaZberry there is a connector with GND and TX pins. To connect RaZberry PTI to a computer, you need a USB-TTL adapter.</p>
+         <p>Connection scheme:
+         <ul>
+            <li>RaZberry GND <-> USB-TTL GND</li>
+            <li>RaZberry TX <-> USB-TTL RX</li>
+         </ul>
+         <img src="pics/RaZberryPTI.png" width="100%">
+         <h4>Z-Uno</h4>
+         <p>To enable PTI mode on Z-Uno, you need to add the following code to the sketch. After that, Z-Uno port can be selected in the Zniffer/A.R.T. At the same time, the main sketch also works.</p>
+         <pre>
+/*
+Packet Trace Interface example
+Z-Uno v2 has built-in interface of modem that shows all sending and receiving radio packages.
+You can enable it in any project to see the Z-Wave traffic around your device.
+To use this interface you need an extra license that you can purchase on z-wave.me site.
+Connect Z-Uno to your PC and start in terminal:
+$ zme_make tracer -d <YOUR_ZUNO_COM/tty port>
+*/
+ZUNO_ENABLE(LOGGING_DBG);
+#define PTI_PIN TX2 // TX2 is default USB CDC pin
+// You are able to sketch ANY ZUno pin
+#define PTI_BAUDRATE 230400 L // The minimal baud is 230400
+void setup() {
+  Serial0.begin(115200);
+  // The maximum baud is 1.6MBit
+  if (zunoPTIConfigUART(PTI_PIN, PTI_BAUDRATE)) {
+    Serial0.println("[Done]");
+  } else {
+    Serial0.println("[Failed]");
+  }
+}
+// Just an empty loop function
+void loop() {}
+         </pre>
+         <h3 id="Download">Download</h3>
+         <p>Zniffer/A.R.T. is available for macOS, Linux x64 and Windows 32. The latest version can be downloaded from:</p>
+         <a href="https://storage.z-wave.me/zniffer/latest/">https://storage.z-wave.me/zniffer/latest/</a>
+         <h3 id="Hardware">Prepare your hardware</h3>
+         <p>Zniffer/A.R.T. software requires RaZberry 7 or Z-Uno 2 as a hardware. To enable the new feature a new firmware (version <a href="/support/uzbrazberry-firmwares">7.26 or upper for RaZberry 7</a> and 3.0.9 for Z-Uno 2)</p>
          <h3 id="TODO">Future development</h3>
-         <p>Zniffer / A.R.T. software is in active development. New features are added every month. Below is the list of features to be implemented soon:</p>
+         <p>Zniffer/A.R.T. software is in active development. New features are added every month. Below is the list of features to be implemented soon:</p>
          <ul>
             <li>S2 decryption</li>
             <li>S0 and S2 encryption to send secure packets</li>
