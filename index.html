@@ -186,13 +186,14 @@
             <p>All versions of Z-Uno 2 support both modes. All versions of RaZberry 7 support modem mode. PTI mode is supported only by <a href="https://z-wave.me/products/razberry/razberry-revisions/" target="_blank">some versions of RaZberry 7</a>.</p>
 
             <h3 id="RemotePort">Remote port</h3>
+            <img src="pics/RemotePortRPi.png" width="80%">
             <p>The <strong>zme_webserial</strong> utility allows you to connect to the equipment that is used on a remote computer. This allows to watch packets from different points in the house in one user interface. The connection to the equipment is done via ethernet or Wi-Fi using the zme_webserial tool.</p>
             <img src="pics/zme_webserial.png" width="60%">
             <p>The zme_webserial utility works not only with Zniffer/A.R.T, but also with other Z-Wave.Me utilities, such as zme_make and zme_programmer.</p>
             <p>When configuring the utility, you can specify which ports are visible remotely based on the "white" and "black" lists.</p>
             <img src="pics/RemotePort.png" width="100%">
             <p>Equipment can be referenced by the port name or the UUID of the equipment.</p>
-            <p>Example of connecting to remote equipment:
+            <p>Standart socket port is a <strong>8998</strong>. Example of connecting to remote equipment:
             <ul>
                <li><i>/dev/cu.SLAB_USBtoUART@192.168.2.41:8998</i> &mdash; macOS</li>
                <li><i>/dev/ttyUSB0@192.168.2.41:8998</i> &mdash; Linux/Raspberry Pi</li>
