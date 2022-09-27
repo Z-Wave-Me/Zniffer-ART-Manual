@@ -184,6 +184,18 @@
                <li><strong>MODEM</strong> &mdash; the equipment is completely controlled by the Zniffer/A.R.T. software. You can sniff and send Z-Wave packets. The user's settings on Z-Uno 2 and RaZberry 7 are not lost, the device will return in its standard mode after the listening is stopped in the Zniffer/A.R.T. stopped. The MODEM license includes the PTI license.</li>
             </ul>
             <p>All versions of Z-Uno 2 support both modes. All versions of RaZberry 7 support modem mode. PTI mode is supported only by <a href="https://z-wave.me/products/razberry/razberry-revisions/" target="_blank">some versions of RaZberry 7</a>.</p>
+            <strong>Connection RaZberry in PTI mode</strong>
+            <p>In PTI mode RaZberry can communicate with the Z-Wave devices and output Z-Wave traffic via a <a href="#PTIPinRaZberry">PTI pin</a>.</p>
+            <img src="pics/RaZberry7PTI.png" width="80%">
+            <strong>Connection RaZberry in Modem mode</strong>
+            <p>In Modem mode RaZberry can't communicate with the Z-Wave devices, but it can send arbitrary Z-Wave packets to any Z-Wave network.</p>
+            <img src="pics/RaZberry7Modem.png" width="80%">
+            <strong>Connection Z-Uno in PTI mode</strong>
+            <p>In PTI mode Z-Uno works like a normal device, transmits data from connected sensors to the Z-Wave network and output sniffed Z-Wave traffic to the computer via USB. Enable PTI mode in <a href="#PTIPinZUno">the sketch</a>.</p>
+            <img src="pics/Z-Uno2PTI.png" width="80%">
+            <strong>Connection Z-Uno in Modem mode</strong>
+            <p>In Modem mode Z-Uno works only like a Z-Wave sniffer with the ability to send arbitrary z-wave packets. The Z-Uno is connected to the computer via USB.</p>
+            <img src="pics/Z-Uno2Modem.png" width="80%">
 
             <h3 id="RemotePort">Remote port</h3>
             <img src="pics/RemotePortRPi.png" width="80%">
@@ -212,7 +224,7 @@
             </p>
 
             <h3 id="PTIPin">PTI pin</h3>
-            <h4>RaZberry</h4>
+            <h4 id="PTIPinRaZberry">RaZberry</h4>
             <p>On the reverse side of the RaZberry there is a connector with GND and TX pins. To connect RaZberry PTI to a computer, you need a USB-TTL adapter.</p>
             <p>Connection scheme:
             <ul>
@@ -220,7 +232,7 @@
                <li>RaZberry TX &harr; USB-TTL RX</li>
             </ul>
             <img src="pics/RaZberryPTI.png" width="100%">
-            <h4>Z-Uno</h4>
+            <h4 id="PTIPinZUno">Z-Uno</h4>
             <p>To enable PTI mode on Z-Uno, you need to add the following code to the sketch. Any pin can be used for PTI. Selecting TX2 pin will forward PTI traffic to the Z-Uno USB port. Note that the pin selected for PTI is not available for your sketch.</p>
             <p>The main sketch will continue to operate normally while PTI is enabled.</p>
             <p>Example of the code with PTI enabled:</p>
