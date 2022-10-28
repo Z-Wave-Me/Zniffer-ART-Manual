@@ -94,7 +94,7 @@
             <ul>
                <li><strong>Name</strong> &mdash; The name of the equipment (Z-Uno, RaZberry) that listens to the radio broadcast. It will be displayed in the Trace window. Can be edited.</li>
                <li><strong>Serial</strong> &mdash; Device port. Both local and remote (using web serial) ports are supported.</li>
-               <li><strong>Protocol</strong> &mdash; Protocol for equipment interaction with the Zniffer/A.R.T application (Modem &mdash; special mode with the ability to monitor and send packets, PTI &mdash; Z-Uno/RaZberry continues to work in normal mode and report all incoming packets).</li>
+               <li><strong>Protocol</strong> &mdash; Protocol for equipment interaction with the Zniffer/A.R.T application (Modem &mdash; special mode with the ability to monitor and send packets, PTI &mdash; Z-Uno/RaZberry continues to work in normal mode and report all incoming packets). See the description of <a href="#OperatingMode">operating modes</a>.</li>
                <li><strong>Baudrate</strong> &mdash; Serial port speed. For PTI, it is selected manually (for RaZberry 7 it is always 230400, for Z-Uno 2 by default 230400 and should match the speed in <a href="https://z-uno.z-wave.me/Reference/zunoPTIConfigUART/?zunoVersion=v2" target="_blank">zunoPTIConfigUART</a> function). For Modem, it is detected automatically.</li>
                <li><strong>Region</strong> &mdash; The radio frequency on which the equipment listens to the radio broadcast. For PTI the current frequency of the equipment is used.</li>
                <li><strong>TX Power</strong> &mdash; The radiation power of the modem is 0.1 dBm. Not available for PTI mode. For Modem it is possible to set a value from 0 to 200, i.e. from 0 to 20 dBm.</li>
@@ -224,6 +224,8 @@
             </p>
 
             <h3 id="PTIPin">PTI pin</h3>
+            <p>The PTI pin is used to get network traffic in the <a href="#OperatingMode">PTI mode</a>.</p>
+            
             <h4 id="PTIPinRaZberry">RaZberry</h4>
             <p>On the reverse side of the RaZberry there is a connector with GND and TX pins. To connect RaZberry PTI to a computer, you need a USB-TTL adapter.</p>
             <p>Connection scheme:
