@@ -4,10 +4,8 @@
       <meta charset="utf-8">
       <title>Z-Wave.Me Zniffer and Advanced Radio Toolkit (A.R.T.)</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--      <link rel="stylesheet" href="css/zniffer.css">-->
       <script src="js/index.js" defer></script>
       <link rel="stylesheet" href="css/style.css">
-<!--      <script src="js/zniffer.js" defer></script>-->
    </head>
    <body>
       <aside class="side-menu open">
@@ -222,7 +220,7 @@
                <li>Zniffer/A.R.T. can extract S0/S2 keys from Z-Uno, which is included to the Z-Wave network (license required, it is included in both PTI and MODEM modes).</li>
             </ul>
             </p>
-            
+
             <p>The key file should have a name XXXXXXXX.txt, where XXXXXXXX is the home ID in heximal, e.g. CEE10BF4.txt. Keys should be listed one per line in the form <code>CC;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;1</code>, where CC is the command class ID (98 for S0 key and 9F for S2 keys) and XXXX..XXXX is the key in heximal form.
             For example for S2 Unauthenticated only:
             <code><pre>98;;1
@@ -230,14 +228,14 @@
 9F;;1
 9F;;1</pre></code>
             </p>
-            
+
             <p>Please note that S2 Unauthenticated, S2 Authenticated and S2 Access keys are written in the same form. There might also be two more keys for Long Range written in the same form as other S2 keys: S2 Authenticated LR and S2 Access LR keys.</p>
-            
+
             <p>To correctly decrypt S0 and S2 packets the Zniffer has to catch the last Nonce between the sender and the receiver. Zniffer (in modem mode) can force re-syncronisation between the two devices by sending a Nonce Get on behalf of one of them.</p>
 
             <h3 id="PTIPin">PTI pin</h3>
             <p>The PTI pin is used to get network traffic in the <a href="#OperatingMode">PTI mode</a>.</p>
-            
+
             <h4 id="PTIPinRaZberry">RaZberry</h4>
             <p>On the reverse side of the RaZberry there is a connector with GND and TX pins. To connect RaZberry PTI to a computer, you need a USB-TTL adapter.</p>
             <p>Connection scheme:
